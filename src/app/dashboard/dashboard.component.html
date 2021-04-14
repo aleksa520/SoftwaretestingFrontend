@@ -1,0 +1,12 @@
+<h3>People</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let person of people" class="col-1-4"
+      routerLink="/detail/{{person.personId}}">
+    <div>
+      <h4>{{person.firstName}}</h4>
+      <p>Reg. Number: {{person.registrationNumber}}
+    </div>
+  </a>
+</div>
+
+<!-- <app-pokemon-search></app-pokemon-search> -->

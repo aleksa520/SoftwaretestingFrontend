@@ -1,0 +1,14 @@
+<div>
+  <label>Person name:
+    <input #personName />
+  </label>
+  <button (click)="add(personName.value); personName.value=''">
+    add
+  </button>
+</div>
+
+<ul>
+  <li *ngFor="let person of people">
+    <app-person [person]="person" (delete)="delete(person)"></app-person>
+  </li>
+</ul>
